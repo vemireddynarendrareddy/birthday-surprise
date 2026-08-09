@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Special Day For My Potti ❤️</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:Georgia,serif;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(70,100,180,.25),transparent 30%),
+        radial-gradient(circle at 80% 80%,rgba(180,120,40,.15),transparent 30%),
+        linear-gradient(135deg,#03050d,#071426,#02030a);
+    color:white;
+    overflow:hidden;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+
+    background-image:
+        radial-gradient(circle,#fff 1px,transparent 1px),
+        radial-gradient(circle,#fff 1px,transparent 1px),
+        radial-gradient(circle,#fff 1px,transparent 1px);
+
+    background-size:
+        100px 100px,
+        170px 170px,
+        240px 240px;
+
+    background-position:
+        20px 30px,
+        80px 100px,
+        150px 50px;
+
+    opacity:.35;
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    animation:floatHeart 8s linear infinite;
+    opacity:.7;
+    pointer-events:none;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:translateY(0) scale(.7);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.4);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page{
+
+    position:absolute;
+
+    inset:0;
+
+    min-height:100vh;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:35px;
+
+    overflow-y:auto;
+
+    animation:pageIn .9s ease;
+}
+
+.page.active{
+    display:flex;
+}
+
+@keyframes pageIn{
+
+    from{
+        opacity:0;
+        transform:scale(.96) translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+h1{
+
+    font-size:clamp(38px,6vw,70px);
+
+    color:#f6d98b;
+
+    font-family:cursive;
+
+    text-shadow:
+        0 0 10px rgba(255,210,120,.6),
+        0 0 30px rgba(255,180,80,.3);
+
+    margin-bottom:15px;
+}
+
+h2{
+
+    font-size:clamp(24px,4vw,40px);
+
+    color:#ffd9e2;
+
+    font-family:cursive;
+
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+
+    width:min(850px,90%);
+
+    max-height:55vh;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#f5f1e8;
+
+    background:rgba(255,255,255,.055);
+
+    border:1px solid rgba(255,215,140,.25);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        inset 0 0 30px rgba(255,255,255,.02);
+}
+
+.content::-webkit-scrollbar{
+    width:5px;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background:#d9aa57;
+    border-radius:20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+
+    border:none;
+
+    padding:14px 32px;
+
+    margin:12px;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    font-family:Georgia,serif;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    background:
+        linear-gradient(135deg,#b57b35,#6d3f1e);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.35);
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 35px rgba(220,170,80,.35);
+}
+
+.back-btn{
+
+    background:rgba(255,255,255,.1);
+
+    border:1px solid rgba(255,255,255,.2);
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-heart{
+
+    font-size:100px;
+
+    animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+.subtitle{
+
+    font-size:20px;
+
+    color:#ddd;
+
+    margin:10px 0 25px;
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+.gift{
+
+    font-size:120px;
+
+    cursor:pointer;
+
+    animation:giftFloat 2s infinite;
+
+    filter:drop-shadow(0 0 20px rgba(255,200,100,.5));
+}
+
+@keyframes giftFloat{
+
+    50%{
+        transform:translateY(-15px) rotate(3deg);
+    }
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-box{
+
+    width:min(500px,90%);
+
+    padding:35px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,215,140,.25);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(12px);
+}
+
+input{
+
+    width:min(350px,90%);
+
+    padding:15px 20px;
+
+    border-radius:30px;
+
+    border:1px solid #d4a85c;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:18px;
+
+    background:rgba(255,255,255,.1);
+
+    color:white;
+
+    margin:20px 0;
+}
+
+input::placeholder{
+    color:#aaa;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+    width:min(750px,90%);
+
+    padding:45px;
+
+    background:
+        linear-gradient(135deg,#f9e7bd,#ead09a);
+
+    color:#4a2b18;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.65);
+
+    position:relative;
+
+    animation:letterOpen 1s ease;
+}
+
+.letter::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:1px solid rgba(90,50,20,.3);
+
+    pointer-events:none;
+}
+
+.letter h1{
+
+    color:#6b351f;
+
+    text-shadow:none;
+}
+
+.letter p{
+
+    font-size:21px;
+
+    line-height:1.9;
+}
+
+
+/* =========================
+   MEMORY GALLERY
+========================= */
+
+.memory-card{
+
+    width:min(650px,90%);
+
+    padding:18px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,215,140,.25);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
+.memory-card img{
+
+    width:100%;
+
+    max-height:60vh;
+
+    object-fit:contain;
+
+    border-radius:18px;
+}
+
+.caption{
+
+    font-size:20px;
+
+    color:#f4dca1;
+
+    margin-top:15px;
+
+    font-family:cursive;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-card{
+
+    width:min(800px,92%);
+
+    padding:20px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,215,140,.25);
+}
+
+.video-card video{
+
+    width:100%;
+
+    max-height:60vh;
+
+    border-radius:18px;
+
+    background:#000;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake{
+
+    font-size:130px;
+
+    cursor:pointer;
+
+    animation:cakePulse 1.5s infinite;
+
+    filter:drop-shadow(0 0 25px rgba(255,200,100,.5));
+}
+
+@keyframes cakePulse{
+
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-message{
+
+    font-size:26px;
+
+    line-height:2;
+
+    color:#ffe5ed;
+
+    font-family:cursive;
+}
+
+.big-love{
+
+    font-size:60px;
+
+    color:#ffb7c9;
+
+    animation:pulse 1.5s infinite;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn{
+
+    position:fixed;
+
+    right:20px;
+
+    top:20px;
+
+    z-index:1000;
+
+    width:52px;
+
+    height:52px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    margin:0;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    font-size:22px;
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+.firework{
+
+    position:fixed;
+
+    font-size:45px;
+
+    animation:firework 2s ease forwards;
+
+    pointer-events:none;
+}
+
+@keyframes firework{
+
+    0%{
+        transform:scale(.2);
+        opacity:0;
+    }
+
+    30%{
+        transform:scale(1.5);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(3);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .page{
+        padding:20px;
+    }
+
+    .content{
+        font-size:17px;
+        line-height:1.7;
+        padding:20px;
+        max-height:60vh;
+    }
+
+    .letter{
+        padding:25px;
+    }
+
+    .letter p{
+        font-size:18px;
+    }
+
+    button{
+        font-size:16px;
+        padding:12px 23px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="bgMusic" loop>
+    <source src="Oh Sita Hey Rama.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()" id="musicButton">
+    🎵
+</button>
+
+<!-- =========================
+     PAGE 0
+========================= -->
+
+<section class="page active" id="page0">
+
+```
+<div class="home-heart">❤️</div>
+
+<h1>A Special Day</h1>
+
+<h2>For My Potti ❤️</h2>
+
+<p class="subtitle">
+    A little world made only for you...
+</p>
+
+<div class="gift" onclick="showPage(1)">
+    🎁
+</div>
+
+<p>
+    Tap the gift to open your surprise
+</p>
+```
+
+</section>
+
+<!-- =========================
+     PAGE 1 PASSWORD
+========================= -->
+
+<section class="page" id="page1">
+
+```
+<div class="password-box">
+
+    <h1>🔐</h1>
+
+    <h2>Secret Memory Box</h2>
+
+    <p>
+        Enter the secret key to enter our little world ❤️
+    </p>
+
+    <p style="color:#e8b8c5;margin-top:15px;">
+        Hint: The first nickname I gave you
+    </p>
+
+    <input
+        id="password"
+        type="password"
+        placeholder="Enter Secret Key..."
+    >
+
+    <br>
+
+    <button onclick="checkPassword()">
+        Unlock ❤️
+    </button>
+
+    <button class="back-btn" onclick="showPage(0)">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PAGE 2 LETTER
+========================= -->
+
+<section class="page" id="page2">
+
+```
+<div class="letter">
+
+    <h1>💌 My Dear Potti ❤️</h1>
+
+    <p>
+
+        Some memories are not written in books...
+
+        <br><br>
+
+        They are written quietly inside the heart. ❤️
+
+        <br><br>
+
+        This little journey carries our smiles,
+        our fights,
+        our distance,
+        our happiness,
+        and all the beautiful memories we created together.
+
+        <br><br>
+
+        Every moment became special
+        because it had you.
+
+        <br><br>
+
+        So...
+
+        <br><br>
+
+        Are you ready to open our story? ❤️
+
+    </p>
+
+</div>
+
+<div>
+
+    <button onclick="showPage(3)">
+        Start Our Journey ✨
+    </button>
+
+    <button class="back-btn" onclick="showPage(1)">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CHAPTER 1
+========================= -->
+
+<section class="page" id="page3">
+
+```
+<h1>❤️ Chapter 1 ❤️</h1>
+
+<h2>The Moment My Eyes Found You 🌹</h2>
+
+<div class="content">
+
+    Every beautiful story has a beginning...
+
+    <br><br>
+
+    Some moments in life are not planned...
+
+    <br><br>
+
+    They just happen...
+
+    <br><br>
+
+    And later...
+
+    we realize that one small moment
+    changed everything. ❤️
+
+    <br><br>
+
+    It was during my Intermediate 2nd year public exams...
+
+    <br><br>
+
+    A normal day...
+
+    A normal place...
+
+    <br><br>
+
+    But for me,
+    that day became a memory
+    I could never forget. ✨
+
+    <br><br>
+
+    I still remember that beautiful moment
+    in the function hall...
+
+    <br><br>
+
+    When I was going into the function hall
+    and opened the gate,
+    I saw you standing straight there...
+
+    <br><br>
+
+    For a few seconds...
+
+    everything around me felt silent. ❤️
+
+    <br><br>
+
+    My eyes stopped there...
+
+    and my heart remembered that moment.
+
+    <br><br>
+
+    I didn't know why that moment felt so special...
+
+    <br><br>
+
+    But somewhere inside me,
+    I felt there was something different about you.
+
+    <br><br>
+
+    At that time,
+    I never knew...
+
+    <br><br>
+
+    That the person I saw for the first time
+    would become the most special person in my life.
+
+    <br><br>
+
+    That was not just a first look...
+
+    <br><br>
+
+    It was the first page
+    of our beautiful story. ❤️
+
+    <br><br>
+
+    A small moment...
+
+    A beautiful memory...
+
+    A beginning of forever. ✨
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(2)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(4)">
+        Next Chapter ❤️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CHAPTER 2
+========================= -->
+
+<section class="page" id="page4">
+
+```
+<h1>❤️ Chapter 2 ❤️</h1>
+
+<h2>The Day Destiny Introduced Us ✨</h2>
+
+<div class="content">
+
+    Life has its own beautiful way
+    of connecting two people...
+
+    <br><br>
+
+    Sometimes,
+    the most unexpected moments
+    become our favourite memories. ❤️
+
+    <br><br>
+
+    During my first year of B.Tech,
+
+    <br><br>
+
+    I visited Annamacharya College, Kadapa,
+    for my project presentation.
+
+    <br><br>
+
+    I never expected that a normal college visit
+    would become one of the most memorable days
+    of my life. ✨
+
+    <br><br>
+
+    Because that was the day...
+
+    <br><br>
+
+    I met you. ❤️
+
+    <br><br>
+
+    I still remember that little moment...
+
+    <br><br>
+
+    I didn't shake hands with you,
+    and I never knew that small thing
+    made you feel a little sad.
+
+    <br><br>
+
+    If I could go back to that moment...
+
+    <br><br>
+
+    I would definitely hold your hand...
+
+    <br><br>
+
+    Because that small missed moment
+    became the first page
+    of our beautiful journey. ❤️
+
+    <br><br>
+
+    And yes...
+
+    <br><br>
+
+    That was also the day
+    we captured our first picture together. 📸
+
+    <br><br>
+
+    A simple picture...
+
+    <br><br>
+
+    But a forever memory. ❤️
+
+    <br><br>
+
+    That day was not just a meeting...
+
+    <br><br>
+
+    It was destiny quietly writing
+    the next chapter of our story. ✨
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(3)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(5)">
+        Next Chapter ❤️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CHAPTER 3
+========================= -->
+
+<section class="page" id="page5">
+
+```
+<h1>❤️ Chapter 3 ❤️</h1>
+
+<h2>The Bond That Started Growing 🌹</h2>
+
+<div class="content">
+
+    After that day,
+    our bond slowly started growing.
+
+    <br><br>
+
+    Long distance was never easy for us...
+
+    <br><br>
+
+    Sometimes,
+    it took months just for us to meet again.
+
+    <br><br>
+
+    There were many struggles,
+    many difficult moments,
+    and many situations where we had to be patient.
+
+    <br><br>
+
+    But through everything,
+    our understanding became stronger. ❤️
+
+    <br><br>
+
+    We slowly learned
+    how to understand each other,
+    care for each other,
+    and stay together
+    even when distance tried to make things difficult.
+
+    <br><br>
+
+    And honestly...
+
+    <br><br>
+
+    The moment I see your chubby face
+    and that beautiful smile,
+    I forget everything else. ❤️
+
+    <br><br>
+
+    Your smile,
+    your beard,
+    and the way you care for me...
+
+    <br><br>
+
+    Everything about you
+    became so special to me.
+
+    <br><br>
+
+    You love me so much,
+    and you always take such good care of me.
+
+    <br><br>
+
+    Somewhere along the way,
+    you stopped being just a person in my life...
+
+    <br><br>
+
+    You became my comfort,
+    my happiness,
+    and someone I never want to lose. ❤️
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(4)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(6)">
+        Next Chapter ❤️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CHAPTER 4
+========================= -->
+
+<section class="page" id="page6">
+
+```
+<h1>❤️ Chapter 4 ❤️</h1>
+
+<h2>My Forever Person ❤️</h2>
+
+<div class="content">
+
+    Somewhere between all our conversations,
+    memories,
+    fights,
+    happiness,
+    and the time we spent together...
+
+    <br><br>
+
+    I slowly realized
+    how deeply I had fallen for you. ❤️
+
+    <br><br>
+
+    You became someone
+    I could never imagine my life without.
+
+    <br><br>
+
+    I know I have hurt you many times...
+
+    <br><br>
+
+    I know there were moments
+    when I made you feel bad,
+    and moments when our fights
+    became too much.
+
+    <br><br>
+
+    But even after all those moments...
+
+    <br><br>
+
+    you still stayed.
+
+    <br><br>
+
+    You still loved me.
+
+    <br><br>
+
+    You still cared for me.
+
+    <br><br>
+
+    And that made me understand
+    how much love you actually have for me. ❤️
+
+    <br><br>
+
+    You are not perfect...
+
+    and neither am I.
+
+    <br><br>
+
+    But somehow,
+    our imperfect story
+    feels perfect to me.
+
+    <br><br>
+
+    I don't just love you
+    for the happy moments...
+
+    <br><br>
+
+    I love you for staying
+    through the difficult ones too.
+
+    <br><br>
+
+    You became my favourite person,
+    my safest place,
+    and the person
+    I want beside me for a long, long time. ❤️
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(5)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(7)">
+        Our Memories 📸
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 1
+========================= -->
+
+<section class="page" id="page7">
+
+```
+<h1>📸 Our Memories</h1>
+
+<div class="memory-card">
+
+    <img src="IMG 8.jpeg" alt="Memory 1">
+
+    <div class="caption">
+        My favourite smile ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(6)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(8)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 2
+========================= -->
+
+<section class="page" id="page8">
+
+```
+<h1>📸 Memory 2</h1>
+
+<div class="memory-card">
+
+    <img src="IMG6.jpeg" alt="Memory 2">
+
+    <div class="caption">
+        Distance means so little 💕
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(7)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(9)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 3
+========================= -->
+
+<section class="page" id="page9">
+
+```
+<h1>📸 Memory 3</h1>
+
+<div class="memory-card">
+
+    <img src="IMAG9.jpeg" alt="Memory 3">
+
+    <div class="caption">
+        Unforgettable moments 🌹
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(8)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(10)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 4
+========================= -->
+
+<section class="page" id="page10">
+
+```
+<h1>📸 Memory 4</h1>
+
+<div class="memory-card">
+
+    <img src="IMG .jpeg" alt="Memory 4">
+
+    <div class="caption">
+        Fights, laughs & love 😊
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(9)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(11)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 5
+========================= -->
+
+<section class="page" id="page11">
+
+```
+<h1>📸 Memory 5</h1>
+
+<div class="memory-card">
+
+    <img src="IMG 12.jpeg" alt="Memory 5">
+
+    <div class="caption">
+        My favourite place is with you ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(10)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(12)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 6
+========================= -->
+
+<section class="page" id="page12">
+
+```
+<h1>📸 Memory 6</h1>
+
+<div class="memory-card">
+
+    <img src="IMG7.jpeg" alt="Memory 6">
+
+    <div class="caption">
+        Pure happiness ✨
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(11)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(13)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 7
+========================= -->
+
+<section class="page" id="page13">
+
+```
+<h1>📸 Memory 7</h1>
+
+<div class="memory-card">
+
+    <img src="IMG5.jpeg" alt="Memory 7">
+
+    <div class="caption">
+        Love beyond words 🌸
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(12)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(14)">
+        Next Memory ➡️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     PHOTO 8
+========================= -->
+
+<section class="page" id="page14">
+
+```
+<h1>📸 Memory 8</h1>
+
+<div class="memory-card">
+
+    <img src="IMG2.jpeg" alt="Memory 8">
+
+    <div class="caption">
+        Forever & Always ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(13)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(15)">
+        Watch Our Videos 🎥
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     VIDEO 1
+========================= -->
+
+<section class="page" id="page15">
+
+```
+<h1>🎥 Our Memories In Motion</h1>
+
+<div class="video-card">
+
+    <video controls>
+
+        <source src="video1.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+    <div class="caption">
+        Special Video 1 ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(14)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(16)">
+        Next Video 🎥
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     VIDEO 2
+========================= -->
+
+<section class="page" id="page16">
+
+```
+<h1>🎥 Another Memory</h1>
+
+<div class="video-card">
+
+    <video controls>
+
+        <source src="video2.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+    <div class="caption">
+        Special Video 2 ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(15)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(17)">
+        Next Video 🎥
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     VIDEO 3
+========================= -->
+
+<section class="page" id="page17">
+
+```
+<h1>🎥 One More Memory</h1>
+
+<div class="video-card">
+
+    <video controls>
+
+        <source src="video3.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+    <div class="caption">
+        Special Video 3 ❤️
+    </div>
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(16)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(18)">
+        Continue ❤️
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CHAPTER 5
+========================= -->
+
+<section class="page" id="page18">
+
+```
+<h1>❤️ Chapter 5 ❤️</h1>
+
+<h2>The Reason I Still Choose You</h2>
+
+<div class="content">
+
+    After everything we have been through...
+
+    <br><br>
+
+    The distance...
+
+    <br>
+
+    The waiting...
+
+    <br>
+
+    The misunderstandings...
+
+    <br>
+
+    The fights...
+
+    <br>
+
+    And all the struggles...
+
+    <br><br>
+
+    One thing still remains the same...
+
+    <br><br>
+
+    I still choose you. ❤️
+
+    <br><br>
+
+    Because when I look at you,
+    I don't just see my love...
+
+    <br><br>
+
+    I see the person
+    who stayed with me,
+    cared for me,
+    understood me,
+    and loved me
+    through everything.
+
+    <br><br>
+
+    Your smile can still make
+    my whole world stop for a moment.
+
+    <br><br>
+
+    And that chubby face...
+
+    ❤️
+
+    <br><br>
+
+    I don't think I can ever get tired
+    of looking at it.
+
+    <br><br>
+
+    Maybe our story isn't perfect...
+
+    <br><br>
+
+    But it is ours.
+
+    <br><br>
+
+    And if I had to start everything again...
+
+    <br><br>
+
+    I would still choose you.
+
+    <br><br>
+
+    Again.
+
+    <br><br>
+
+    And again.
+
+    <br><br>
+
+    And again. ❤️
+
+</div>
+
+<div>
+
+    <button class="back-btn" onclick="showPage(17)">
+        ← Back
+    </button>
+
+    <button onclick="showPage(19)">
+        One Last Surprise 🎁
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     BIRTHDAY SURPRISE
+========================= -->
+
+<section class="page" id="page19">
+
+```
+<div class="gift">
+    🎁
+</div>
+
+<h1>One Last Surprise...</h1>
+
+<h2>For My Potti ❤️</h2>
+
+<p class="subtitle">
+    Something special is waiting for you...
+</p>
+
+<button onclick="showPage(20)">
+    Open Surprise ✨
+</button>
+
+<button class="back-btn" onclick="showPage(18)">
+    ← Back
+</button>
+```
+
+</section>
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<section class="page" id="page20">
+
+```
+<h1>🎂 Make A Wish 🎂</h1>
+
+<p class="subtitle">
+    Close your eyes... make a wish... ❤️
+</p>
+
+<div class="cake" onclick="blowCake()" id="cake">
+    🎂
+</div>
+
+<p id="cakeText" class="subtitle">
+    Tap the cake to blow the candles ✨
+</p>
+
+<button
+    id="finalButton"
+    style="display:none;"
+    onclick="showPage(21)"
+>
+    Read My Final Letter 💌
+</button>
+```
+
+</section>
+
+<!-- =========================
+     FINAL LETTER
+========================= -->
+
+<section class="page" id="page21">
+
+```
+<div class="letter">
+
+    <h1>Happy Birthday Narendra ❤️</h1>
+
+    <p>
+
+        Dear Narendra,
+
+        <br><br>
+
+        On your special day,
+        I just want to remind you
+        how much you mean to me.
+
+        <br><br>
+
+        You came into my life
+        as a simple person I never expected
+        to become so important.
+
+        <br><br>
+
+        From the first moment I saw you,
+        to every memory we created together...
+
+        <br><br>
+
+        Everything became a part
+        of our beautiful story.
+
+        <br><br>
+
+        Thank you for loving me.
+
+        <br><br>
+
+        Thank you for caring for me.
+
+        <br><br>
+
+        Thank you for staying
+        even when things were difficult.
+
+        <br><br>
+
+        I know I have hurt you.
+        I know we have fought.
+        I know we have faced many struggles.
+
+        <br><br>
+
+        But through everything...
+
+        <br><br>
+
+        I still want you.
+
+        <br><br>
+
+        I still choose you.
+
+        <br><br>
+
+        And I still want
+        many more memories with you. ❤️
+
+        <br><br>
+
+        May your life be filled with
+        happiness, success,
+        peace and everything
+        your heart wishes for.
+
+        <br><br>
+
+        Happy Birthday
+        to the person
+        who became one of the most
+        beautiful parts of my life.
+
+        <br><br>
+
+        ❤️ I Love You ❤️
+
+    </p>
+
+</div>
+
+<button onclick="celebrate()">
+    Celebrate 🎆
+</button>
+```
+
+</section>
+
+<!-- =========================
+     END
+========================= -->
+
+<section class="page" id="page22">
+
+```
+<div class="big-love">
+    ❤️
+</div>
+
+<h1>
+    Happy Birthday My Love
+</h1>
+
+<h2>
+    Narendra ❤️
+</h2>
+
+<p class="final-message">
+
+    I Love You Today.
+
+    <br><br>
+
+    I Love You Tomorrow.
+
+    <br><br>
+
+    And...
+
+    <br><br>
+
+    <b>
+        I Will Love You In Every Lifetime. ❤️
+    </b>
+
+</p>
+
+<button onclick="showPage(0)">
+    Replay Our Story 🔄
+</button>
+```
+
+</section>
+
+<script>
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+function showPage(number){
+
+    document.querySelectorAll(".page").forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+    const target = document.getElementById("page" + number);
+
+    if(target){
+
+        target.classList.add("active");
+
+        target.scrollTop = 0;
+
+    }
+
+    window.scrollTo(0,0);
+
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+function checkPassword(){
+
+    const password =
+        document.getElementById("password").value;
+
+    if(password === "KANNA"){
+
+        showPage(2);
+
+        startMusic();
+
+    }
+
+    else{
+
+        alert("Wrong Password ❌");
+
+    }
+
+}
+
+
+/* =========================
+   ENTER KEY
+========================= */
+
+document
+.getElementById("password")
+.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+
+        checkPassword();
+
+    }
+
+});
+
+
+/* =========================
+   MUSIC
+========================= */
+
+
+const music = document.getElementById("bgMusic");
+
+let musicPlaying = false;
+let musicStarted = false;
+
+function startMusic(){
+
+    if(!musicStarted){
+
+        music.currentTime = 40;
+        musicStarted = true;
+
+    }
+
+    music.play()
+    .then(function(){
+
+        musicPlaying = true;
+
+        document.getElementById("musicButton")
+        .textContent = "🔊";
+
+    })
+    .catch(function(error){
+
+        console.log("Music needs user interaction.");
+
+    });
+
+}
+
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        startMusic();
+
+    }else{
+
+        music.pause();
+
+        musicPlaying = false;
+
+        document.getElementById("musicButton")
+        .textContent = "🎵";
+
+    }
+
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        Math.random() > .5 ? "❤️" : "✨";
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 6) + "s";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },11000);
+
+}
+
+setInterval(createHeart,900);
+
+
+/* =========================
+   CAKE
+========================= */
+
+function blowCake(){
+
+    const cake =
+        document.getElementById("cake");
+
+    const text =
+        document.getElementById("cakeText");
+
+    const button =
+        document.getElementById("finalButton");
+
+    cake.innerHTML = "🎂✨";
+
+    cake.style.animation = "none";
+
+    text.innerHTML =
+        "Wish made... ❤️ May every beautiful dream of yours come true.";
+
+    button.style.display = "inline-block";
+
+    createFireworks();
+
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+function createFireworks(){
+
+    const symbols =
+        ["🎆","✨","💥","❤️","🌟"];
+
+    for(let i=0;i<25;i++){
+
+        setTimeout(function(){
+
+            const firework =
+                document.createElement("div");
+
+            firework.className =
+                "firework";
+
+            firework.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random()*symbols.length
+                    )
+                ];
+
+            firework.style.left =
+                Math.random()*90 + "%";
+
+            firework.style.top =
+                Math.random()*80 + "%";
+
+            document.body.appendChild(firework);
+
+            setTimeout(function(){
+
+                firework.remove();
+
+            },2000);
+
+        },i*100);
+
+    }
+
+}
+
+
+/* =========================
+   FINAL CELEBRATION
+========================= */
+
+function celebrate(){
+
+    createFireworks();
+
+    setTimeout(function(){
+
+        showPage(22);
+
+        createFireworks();
+
+    },1500);
+
+}
+
+
+/* =========================
+   START HEARTS
+========================= */
+
+for(let i=0;i<8;i++){
+
+    setTimeout(createHeart,i*500);
+
+}
+
+</script>
+
+</body>
+</html>
